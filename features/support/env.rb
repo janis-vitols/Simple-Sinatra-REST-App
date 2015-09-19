@@ -1,3 +1,7 @@
+# Check code coverage
+require 'simplecov'
+SimpleCov.start
+
 require File.join(File.dirname(__FILE__), '..', '..', 'simple_rest_app')
 require 'pry'
 require 'rack/test'
