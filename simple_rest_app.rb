@@ -10,4 +10,9 @@ class SimpleRESTApp < Sinatra::Base
     content_type :json
     SimpleRESTApp.data.to_json
   end
+
+  post '/login' do
+    code = SimpleRESTApp.data.include?(params) ? 200 : 400
+    status code
+  end
 end
