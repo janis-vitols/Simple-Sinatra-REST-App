@@ -14,3 +14,12 @@ Then /^the response should be JSON:$/ do |json|
 
   expect(response_json).to eq(expected_json)
 end
+
+When /^the client requests POST (.*) with params:$/ do |path, params_table|
+  params = params_table.hashes.first
+  post(path, params)
+end
+
+Then /^the response status should be (#{CAPTURE_INTEGER})$/ do |status|
+  expect(last_response.status).to eq(status)
+end
