@@ -1,3 +1,11 @@
+# Set environment
+ENV['RACK_ENV'] = 'test'
+
+# Set mongoDB loggin to INFO
+# (less flood when tests running)
+require 'mongoid'
+Mongo::Logger.logger.level = Logger::INFO
+
 # Check code coverage
 require 'simplecov'
 SimpleCov.start

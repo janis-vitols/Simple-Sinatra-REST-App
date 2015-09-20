@@ -1,0 +1,14 @@
+development:
+  clients:
+    default:
+      database: simple_rest_app_development
+      hosts:
+        - localhost:27017
+
+test:
+  clients:
+    default:
+      database: simple_rest_app_test
+      hosts:
+        - localhost:27017
+

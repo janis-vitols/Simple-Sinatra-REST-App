@@ -1,5 +1,8 @@
 require 'sinatra'
 require 'json'
+require 'mongoid'
+
+Mongoid.load!('mongoid.yml')
 
 class SimpleRESTApp < Sinatra::Base
   set :data do
