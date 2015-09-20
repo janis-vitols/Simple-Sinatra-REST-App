@@ -7,6 +7,12 @@ require './lib/user.rb'
 Mongoid.load!('mongoid.yml')
 
 class SimpleRESTApp < Sinatra::Base
+
+  post '/new' do
+    user = User.new(params)
+    code = user.save ? 200 : 400
+
+    status code
   end
 
   get '/users' do
