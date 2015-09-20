@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'sinatra', '~> 1.4.6'
 gem 'json', '~> 1.8.2'
+gem 'mongoid', '~> 5.0.0'
 
 group :test do
   gem 'pry-byebug', '~> 3.2.0'
