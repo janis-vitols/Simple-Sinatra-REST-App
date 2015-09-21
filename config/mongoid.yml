@@ -1,0 +1,28 @@
+development:
+  clients:
+    default:
+      database: simple_rest_app_development
+      hosts:
+        - localhost:27017
+
+test:
+  clients:
+    default:
+      database: simple_rest_app_test
+      hosts:
+        - localhost:27017
+
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+
+      options:
+        # max_retries specifies the number of times to attempt
+        # an operation before giving up.
+        max_retries: 30
+
+        # retry_interval specifies the number of seconds to wait
+        # before retrying a single operation.
+        retry_interval: 1
+

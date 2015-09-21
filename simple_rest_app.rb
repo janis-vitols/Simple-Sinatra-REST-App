@@ -4,7 +4,7 @@ require 'mongoid'
 
 require './lib/user.rb'
 
-Mongoid.load!('mongoid.yml')
+Mongoid.load!('config/mongoid.yml')
 
 class SimpleRESTApp < Sinatra::Base
 
